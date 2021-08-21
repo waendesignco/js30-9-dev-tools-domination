@@ -18,28 +18,68 @@
     }
 
     // Regular
+    console.log("hello");
 
     // Interpolated
-
+    console.log('Hello I am a %s string!', '😀')
+   
     // Styled
-
+    console.log('%c I am some great text', 'font-size:50px; background:red; text-shadow: 10px 10px blue')
+    
     // warning!
+    console.warn('OH NOOO');
 
     // Error :|
+    console.error('Not working');
 
     // Info
+    console.info('Fun fact');
 
     // Testing
+    const p = document.querySelector('p');
+
+    console.assert(p.classList.contains("ouch"), "That is wrong!");
 
     // clearing
+    console.clear();
 
     // Viewing DOM Elements
+    console.log(p);
+    console.dir(p);
+
+    console.clear();
 
     // Grouping together
+    dogs.forEach(dog => {
+      console.group(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 3} years old in human age`);
+      console.groupEnd(`${dog.name}`);
+    });
 
     // counting
+    console.count("R")
+    console.count("R")
+    console.count("R")
+    console.count("Y")
+    console.count("R")
+    console.count("Y")
+    console.count("R")
+    console.count("Y")
+    console.count("R")
 
     // timing
+    console.time("fetching data");
+    fecth ('https://github.com/waendesignco')
+    .then(data => data.json())
+    .then(data => {
+      console.timeEnd("fetching data");
+      console.log(data);
+    });
+
+    //table
+    console.table(dogs);
 
   </script>
 </body>
